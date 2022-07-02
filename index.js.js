@@ -3,7 +3,7 @@ const needle = require('needle');
 const token = process.env.TWITTER_TOKEN;
 const rulesURL = 'https://api.twitter.com/2/tweets/search/stream/rules';
 const streamURL = 'https://api.twitter.com/2/tweets/search/stream';
-const rules = require("../rules.json")
+const rules = require("./rules.json")
 
 async function getAllRules() {
     const response = await needle('get', rulesURL, {
