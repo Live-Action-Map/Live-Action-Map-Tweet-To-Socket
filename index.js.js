@@ -114,7 +114,7 @@ httpServer.listen(process.env.SERVER_PORT);
 
 function handleStreamMessage(message) {
     try {
-        io.emit('tweet', message);
+        io.emit('tweet', { message });
     }
     catch (e) {
         logger.error(e)
